@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <style>
+    body {
+      /* Default background color */
+      background-color: white;
+    }
+    /* Background color when mess is North */
+    .north {
+      background-color: pink;
+    }
+    /* Background color when mess is South */
+    .south {
+      background-color: skyblue;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      border: 2px solid black; /* Add a border to the table */
+    }
+
+    th, td {
+      text-align: center;
+      padding: 8px;
+      border: 1px solid black; /* Add a border to the table cells */
+    }
+
+    th {
+      background-color: #f2f2f2;
+      color: #333;
+      font-weight: bold;
+    }
+
+    /* Style the buttons */
+    button {
+      background-color: #f2f2f2; /* Green */
+      border: none;
+      color: black;
+      padding: 10px 24px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    /* Change the background color of active buttons */
+    button:active {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+
+<body th:class="${color}">
+
+
+<h1>Welcome to your dashboard</h1>
+<h1 th:text="${errorMessage}" />
+
+<form method="POST" action="/updateMealCount">
+  <input type="hidden" name="rollNo" th:value="${rollNumber}">
+  <input type="hidden" name="color" th:value="${color}">
+
+
+  <button type="submit" name="mealType" value="breakfast">Breakfast</button>
+  <button type="submit" name="mealType" value="lunch">Lunch</button>
+  <button type="submit" name="mealType" value="snacks">Snacks</button>
+  <button type="submit" name="mealType" value="dinner">Dinner</button>
+</form>
+<h1 th:text="${mess}" />
+
+
+<p>Today's meal counts:</p>
+<table>
+  <tr>
+    <th>Meal Type</th>
+    <th>Count</th>
+  </tr>
+  <tr>
+    <td>Breakfast</td>
+    <td th:text="${bf}"></td>
+  </tr>
+  <tr>
+    <td>Lunch</td>
+    <td th:text="${lunch}"></td>
+  </tr>
+  <tr>
+    <td>Snacks</td>
+    <td th:text="${snacks}"></td>
+  </tr>
+  <tr>
+    <td>Dinner</td>
+    <td th:text="${dinner}"></td>
+  </tr>
+</table>
+
+
+</body>
+</html>
