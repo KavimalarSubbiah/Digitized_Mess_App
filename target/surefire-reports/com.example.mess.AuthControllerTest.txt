@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.example.mess.AuthControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.362 s <<< FAILURE! - in com.example.mess.AuthControllerTest
+testUpdateMealCount  Time elapsed: 0.351 s  <<< ERROR!
+java.lang.IllegalArgumentException: Invalid meal type: north
+	at com.example.mess.AuthControllerTest.testUpdateMealCount(AuthControllerTest.java:52)
+

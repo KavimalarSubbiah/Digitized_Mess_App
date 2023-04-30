@@ -65,6 +65,7 @@ public class AuthController {
         return new ModelAndView("homepage");
     }
 
+
     @PostMapping("/updateMealCount")
     public ModelAndView updateMealCount(@RequestParam String rollNo, @RequestParam String mealType, @RequestParam String color, Model model){
 

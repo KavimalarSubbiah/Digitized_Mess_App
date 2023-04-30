@@ -2,15 +2,106 @@
 <html>
 <head>
   <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      color: #4CAF50;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      background-color: #fff;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    input[type="submit"] {
+      display: block;
+      width: 100%;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .dashboard-btn {
+      display: block;
+      width: 50%;
+      background-color: transparent;
+      color: #0077b6;
+      border: 2px solid #0077b6;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 20px auto 0;
+    }
+
+    .dashboard-btn:hover {
+      background-color: #0077b6;
+      color: #fff;
+    }
+
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+  </style>
 </head>
 <body>
 <h1>Login</h1>
+
 <form action="/homepage" method="POST">
-  <label for="rollNo">rollNo:</label>
-  <input type="text" id="rollNo" name="rollNo"><br><br>
-  <label for="password">password:</label>
-  <input type="password" id="password" name="password"><br><br>
+  <label for="rollNo">Roll No:</label>
+  <input type="text" id="rollNo" name="rollNo">
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password">
+
   <input type="submit" value="Submit">
 </form>
+
+
+<button class="dashboard-btn" onclick="window.location.href='https://dashboard.nitt.edu/auth'">Change your mess</button>
+
+
 </body>
 </html>
